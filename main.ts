@@ -4,10 +4,6 @@
 * Company: Your Company Name
 * Website: https://www.example.com
 * Email: support@example.com
-*
-* Based on the open-source "pxt-zoombit" MakeCode extension by
-* Cytron Technologies Sdn Bhd (https://github.com/cytrontechnologies/pxt-zoombit),
-* released under the MIT License.
 *******************************************************************************/
 
 // Default motor channel.
