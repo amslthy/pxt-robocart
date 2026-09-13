@@ -27,6 +27,7 @@ if (board_ver == "1") {
     const_2divspeed = 39
 }
 
+/*
 // Headlight channel.
 enum HeadlightChannel {
     //% block="left"
@@ -52,6 +53,7 @@ enum TurnDirection {
     //% block="right"
     Right = 1
 };
+*/
 
 // Maker Line position.
 enum LinePosition {
