@@ -27,6 +27,7 @@ if (board_ver == "1") {
     const_2divspeed = 39
 }
 
+/*
 // Headlight channel.
 enum HeadlightChannel {
     //% block="left"
@@ -44,6 +45,7 @@ enum DigitalIoState {
     //% block="on"
     On = 1,
 }
+*/
 
 // Turn direction.
 enum TurnDirection {
@@ -75,7 +77,7 @@ enum LinePosition {
  * Blocks for ROBO:CART motors and sensors.
  */
 //% weight=11 color=#ff8000 icon="\uf1b9" block="ROBO:CART"
-//% groups=['Headlights', 'DC Motors', 'Maker Line', 'Ultrasonic']
+//% groups=['DC Motors', 'Maker Line', 'Ultrasonic']
 namespace robocart {
 
     // Ultrasonic sensor distance.
@@ -136,12 +138,12 @@ namespace robocart {
         left: 0,
         right: 0
     };
-
-    /**
+    //---------
+    /*
      * Turn on/off the headlight (On = 1, Off = 0).
      * @param channel Which side of the headlight.
      * @param state Headlight state.
-     */
+    
     //% group="Headlights"
     //% weight=30
     //% blockGap=8
@@ -166,11 +168,12 @@ namespace robocart {
         pins.digitalWritePin(<number>HeadlightChannel.Left, headlightsState.left);
         pins.digitalWritePin(<number>HeadlightChannel.Right, headlightsState.right);
     }
+     */
 
-    /**
+    /*
      * Toggle the headlight.
      * @param channel Which side of the headlight.
-     */
+    
     //% group="Headlights"
     //% weight=29
     //% blockGap=8
@@ -191,11 +194,11 @@ namespace robocart {
         pins.digitalWritePin(<number>HeadlightChannel.Left, headlightsState.left);
         pins.digitalWritePin(<number>HeadlightChannel.Right, headlightsState.right);
     }
-
-    /**
+     */
+    /*
      * Get the digital IO state field editor.
      * @param state Digital IO state. eg: DigitalIoState.On
-     */
+    
     //% blockHidden=true
     //% colorSecondary="#ff8000"
     //% blockId="robocart_digital_state_picker"
@@ -203,7 +206,9 @@ namespace robocart {
     export function digitalStatePicker(state: DigitalIoState): number {
         return <number>state;
     }
-
+     */
+    //---------
+    
     /**
      * Brake the motors.
      */
