@@ -1,6 +1,6 @@
 {
     "name": "pxt-robocart",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "MakeCode Package for RoboCart Robot Car Kit",
     "license": "MIT",
     "dependencies": {
