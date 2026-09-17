@@ -27,26 +27,6 @@ if (board_ver == "1") {
     const_2divspeed = 39
 }
 
-/*
-// Headlight channel.
-enum HeadlightChannel {
-    //% block="left"
-    Left = DigitalPin.P13,
-    //% block="right"
-    Right = DigitalPin.P15,
-    //% block="all"
-    All = 1000,
-};
-
-// IO state.
-enum DigitalIoState {
-    //% block="off"
-    Off = 0,
-    //% block="on"
-    On = 1,
-}
-*/
-
 // Turn direction.
 enum TurnDirection {
     //% block="left"
@@ -138,76 +118,6 @@ namespace robocart {
         left: 0,
         right: 0
     };
-    //---------
-    /*
-     * Turn on/off the headlight (On = 1, Off = 0).
-     * @param channel Which side of the headlight.
-     * @param state Headlight state.
-    
-    //% group="Headlights"
-    //% weight=30
-    //% blockGap=8
-    //% blockId=robocart_set_headlight
-    //% block="set %channel headlight to %state"
-    //% state.shadow=robocart_digital_state_picker
-    export function setHeadlight(channel: HeadlightChannel, state: number): void {
-        // Limit the number.
-        state = rekabit.limit(state, 0, 1);
-
-        // Save the pin state.
-        switch (channel) {
-            case HeadlightChannel.Left: headlightsState.left = state; break;
-            case HeadlightChannel.Right: headlightsState.right = state; break;
-            case HeadlightChannel.All:
-                headlightsState.left = state;
-                headlightsState.right = state;
-                break;
-        }
-
-        // Write to pin.
-        pins.digitalWritePin(<number>HeadlightChannel.Left, headlightsState.left);
-        pins.digitalWritePin(<number>HeadlightChannel.Right, headlightsState.right);
-    }
-     */
-
-    /*
-     * Toggle the headlight.
-     * @param channel Which side of the headlight.
-    
-    //% group="Headlights"
-    //% weight=29
-    //% blockGap=8
-    //% blockId=robocart_toggle_headlight
-    //% block="Toggle %channel headlight"
-    export function toggleHeadlight(channel: HeadlightChannel): void {
-        // Toggle the state.
-        switch (channel) {
-            case HeadlightChannel.Left: headlightsState.left ^= 1; break;
-            case HeadlightChannel.Right: headlightsState.right ^= 1; break;
-            case HeadlightChannel.All:
-                headlightsState.left ^= 1;
-                headlightsState.right ^= 1;
-                break;
-        }
-
-        // Write to pin.
-        pins.digitalWritePin(<number>HeadlightChannel.Left, headlightsState.left);
-        pins.digitalWritePin(<number>HeadlightChannel.Right, headlightsState.right);
-    }
-     */
-    /*
-     * Get the digital IO state field editor.
-     * @param state Digital IO state. eg: DigitalIoState.On
-    
-    //% blockHidden=true
-    //% colorSecondary="#ff8000"
-    //% blockId="robocart_digital_state_picker"
-    //% block="%state"
-    export function digitalStatePicker(state: DigitalIoState): number {
-        return <number>state;
-    }
-     */
-    //---------
     
     /**
      * Brake the motors.
