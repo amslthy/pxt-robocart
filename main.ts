@@ -123,7 +123,7 @@ namespace robocart {
      * Brake the motors.
      */
     //% group="DC Motors"
-    //% weight=20
+    //% weight=18.5
     //% blockGap=8
     //% blockId=robocart_brake
     //% block="brake"
