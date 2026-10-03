@@ -1,9 +1,8 @@
 {
     "name": "pxt-robocart",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "description": "MakeCode Package for RoboCart Robot Car Kit",
     "license": "MIT",
-    "icon": "icon.png",
     "dependencies": {
         "core": "*",
         "radio": "*",
@@ -12,8 +11,7 @@
     },
     "files": [
         "README.md",
-        "main.ts",
-        "icon.png"
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
